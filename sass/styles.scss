@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css?family=Lora&display=swap");
+
+:root {
+	font-size: 16px;
+	--bg-color-scene-1: #f76c6c;
+	--bg-color-scene-2: #F8E9E6;
+	--bg-color-scene-3: #333333;
+	--first-color: #4e89b3;
+	--second-color: #70c4ff;
+	--third-color: #ff8c8a;
+	--fourth-color: #ffffa3;
+	--fifth-color: #b3504f;
+	--primary-font: "Lora", serif;
+	--line-height: 1.5rem;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: auto;
+	width: 100%;
+	height: auto;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+
+}
+
+body {
+	line-height: var(--line-height);
+}
+
+@mixin rounded {
+	border-radius: 50px;
+	border: 10px solid #000;
+}
+
+h1 {
+	// @include rounded;
+	font-family: var(--primary-font);
+	font-size: 2rem;
+	color: var(--first-color);
+	grid-column: 1/13;
+	grid-row: 1;
+	margin-top: 50px;
+	margin-left: 50px;
+}
+
+
+#sceneOne {
+	background-color: var(--bg-color-scene-1);
+	height: 100vh;
+	width: 100vw;
+	display: grid;
+	grid-column: 1 / span 13;
+	grid-row: 1/2;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	scroll-behavior: smooth;
+
+
+	img {
+		margin: auto;
+		grid-column: 1 / span 13;
+
+	}
+
+	.arrow_down-screen1 {
+		margin: auto;
+		grid-row: 4;
+		grid-column: 1/ span 13;
+		margin-top: 200px;
+	}
+
+	#how-the {
+		width: 15%;
+		grid-row: 1;
+	}
+
+	#lightBulb {
+		width: 70%;
+		height: auto;
+		grid-row: 2;
+	}
+
+	#changed {
+		width: 15%;
+		grid-row: 3;
+	}
+
+	#the-world {
+		width: 50%;
+		grid-row: 4/5;
+		margin-bottom: 100px;
+	}
+
+
+}
+
+#sceneTwo {
+	height: 100vh;
+	width: 100vw;
+	display: grid;
+	grid-column: 1 / span 13;
+	grid-row: 2 /3;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	scroll-behavior: smooth;
+	background-color: var(--bg-color-scene-2);
+
+	a {
+		grid-row: 1;
+		grid-column: 1;
+		margin-top: 50px;
+		margin-left: 50px;
+	}
+
+
+	h1 {
+		grid-column: 2 / span 13;
+		margin-top: 65px;
+		margin-left: 50px;
+	}
+
+	p {
+		grid-column: 1 / 6;
+		grid-row: 2;
+		margin-left: 50px;
+	}
+
+	#birth {
+		height: auto;
+		width: 40%;
+		grid-column: 7 / span 13;
+		grid-row: 1/5;
+		z-index: 1;
+
+	}
+
+	#shape {
+		height: auto;
+		width: 100%;
+		grid-column: 7 / span 13;
+		grid-row: 1/5;
+
+	}
+
+	/*Animations*/
+	/*Animation lights*/
+	#space {
+
+		clip-path: circle(500px at center);
+
+		background-color: #E1CCC8;
+		width: 100%;
+		height: 100%;
+		display: grid;
+		grid-column: 6/ span 13;
+		grid-row: 1/ span 5;
+		place-items: center center;
+		overflow: hidden;
+
+
+		--perspective: 0px;
+		perspective: var(--perspective);
+		transform-style: preserve-3d;
+
+		&::after {
+			display: block;
+			content: '';
+			grid-area: 1 / 1;
+			width: 100%;
+			height: 100%;
+			background-image:
+				linear-gradient(45deg, #E1CCC8, transparent, #E1CCC8),
+				linear-gradient(to right, #E1CCC8, transparent, #E1CCC8),
+				linear-gradient(to bottom, #E1CCC8, #E1CCC8, #E1CCC8);
+			mix-blend-mode: overlay;
+		}
+	}
+
+	#space time {
+		grid-area: 1 / 1;
+		width: 100px;
+		height: 100px;
+		transform-origin: 50% 0%;
+		will-change: transform;
+		background-color: white;
+		box-shadow: 0 0 .5rem white, 0 0 1rem white;
+
+		@supports (-moz-transition: all) {
+			// Firefox can't hang...
+			box-shadow: 0 0 .5rem white;
+		}
+	}
+
+	/*Animations end*/
+
+	button {
+		border-style: none;
+		background-color: #E1CCC8;
+		color: black;
+		width: 100px;
+		height: 40px;
+		font-size: 1rem;
+		border-radius: 50px;
+		grid-column: 5;
+		grid-row: 2;
+		align-self: flex-end;
+		justify-self: flex-end;
+	}
+
+	img {
+		margin: auto;
+		grid-column: 1 / span 13;
+
+	}
+
+	.arrow_up-screen2 {
+		margin: auto;
+		grid-row: 1;
+		grid-column: 1/ span 13;
+		margin-top: 50px;
+	}
+
+	.arrow_down-screen2 {
+		margin: auto;
+		grid-row: 4;
+		grid-column: 1/ span 13;
+		margin-bottom: 50px;
+	}
+
+	/*modal*/
+	.hide {
+		display: none;
+	}
+
+	.modal-background {
+		position: fixed;
+		z-index: 10;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(50, 50, 50, 0.9);
+	}
+
+	.modal-content {
+		box-sizing: border-box;
+		background-color: #fefefe;
+		border: 1px solid black;
+		margin: auto;
+		margin-top: 20px;
+		text-align: center;
+		padding: 2em;
+		width: 60%;
+		height: auto;
+		font-family: 'Acme', sans-serif;
+	}
+
+	.data_name {
+		font-size: 1.5rem;
+		text-align: center;
+	}
+
+}
+
+#sceneThree {
+	background-color: var(--bg-color-scene-3);
+	height: 100vh;
+	width: 100vw;
+	display: grid;
+	grid-column: 1/ span 13;
+	scroll-behavior: smooth;
+
+	.homeIcon2 {
+		grid-row: 1;
+		grid-column: 1;
+		margin-top: 50px;
+		margin-left: 50px;
+	}
+
+
+	h1 {
+		margin: auto;
+		grid-column: 1/ span 13;
+
+		margin-top: 200px;
+		color: var(--fourth-color);
+	}
+
+	#stars {
+		grid-row: 2/ span 4;
+		grid-column: 1/ span 13;
+		width: 100%;
+	}
+
+	#worldImg {
+		height: 100vh;
+		width: 100%;
+		grid-column: 1/ span 13;
+		grid-row: 3/4;
+	}
+
+	img {
+		margin: auto;
+		grid-row: 1;
+	}
+
+	.arrow_up-screen3 {
+		margin: auto;
+		grid-row: 1;
+		grid-column: 1 / span 13;
+		margin-top: 50px;
+	}
+}
+
+// #scene_three_bg {
+// 	// grid-column: 1;
+// 	height: 100vh;
+// }
+
+// #island {
+// 	position: absolute;
+// 	color: yellow;
+// 	font-size: 70px;
+// 	transform: translateZ(1px) translateX(500px) scale(3.5);
+// 	box-shadow: 10px 10px 37px 1px rgba(0, 0, 0, 0.75);
+// 	/* animation: var(--animation-one); */
+// 	filter: blur(3px);
+// }

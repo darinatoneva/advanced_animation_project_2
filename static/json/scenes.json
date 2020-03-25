@@ -1,0 +1,56 @@
+{
+	"scene_one": [
+		{
+			"title": "scene_1_image",
+			"media_type": "image",
+			"media_url": "img/world.svg"
+		},
+		{
+			"title": "scene_1_audio",
+			"media_type": "audio",
+			"media_url": ""
+		},
+		{
+			"title": "scene_1_text",
+			"media_type": "text",
+			"media_url": "",
+			"text": "How the lightbulb changed the world!"
+		}
+	],
+	"scene_two": [
+		{
+			"title": "scene_2_image",
+			"media_type": "image",
+			"media_url": "img/star_background.svg"
+		},
+		{
+			"title": "scene_2_audio",
+			"media_type": "audio",
+			"media_url": ""
+		},
+		{
+			"title": "scene_2_text",
+			"media_type": "text",
+			"media_url": "",
+			"text": "Through a need for a clean, continuous form of light the electric lightbulb was born. The desire for incandescent lighting resulted in the creation of the electric grid, which improved communication, health care, manufacturing, transportation, and education."
+		}
+	],
+	"scene_three": [
+		{
+			"title": "scene_3_image",
+			"media_type": "image",
+			"media_url": "img/world.svg"
+		},
+		{
+			"title": "scene_3_audio",
+			"media_type": "audio",
+			"media_url": ""
+		},
+		{
+			"title": "scene_3_text",
+			"media_type": "text",
+			"media_url": "",
+			"text": "Electricity also reshaped the design of our cities and the rhythm of society. By removing the need for skylights, taller and taller buildings became a reality and cities could function through the night."
+		}
+	]
+}

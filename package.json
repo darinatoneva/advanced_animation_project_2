@@ -1,0 +1,46 @@
+{
+	"name": "theme_12_advanced_animation_project",
+	"version": "0.0.1",
+	"description": "How The Electric Lightbulb Changed The World",
+	"main": "js/script.js",
+	"scripts": {
+		"start": "parcel *.html --open",
+		"build": "parcel build *.html --public-url ./",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Sweatpants Heroes",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.9.0",
+		"@babel/plugin-transform-regenerator": "^7.8.7",
+		"@babel/plugin-transform-runtime": "^7.9.0",
+		"parcel-bundler": "^1.12.4",
+		"parcel-plugin-static-files-copy": "^2.3.1",
+		"sass": "^1.26.3"
+	},
+	"dependencies": {
+		"@babel/polyfill": "^7.8.7",
+		"@babel/runtime": "^7.9.2"
+	},
+	"plugins": [
+		[
+			"@babel/plugin-transform-regenerator",
+			{
+				"asyncGenerators": false,
+				"generators": false,
+				"async": false
+			}
+		],
+		[
+			"@babel/plugin-transform-runtime",
+			{
+				"absoluteRuntime": false,
+				"corejs": false,
+				"helpers": true,
+				"regenerator": true,
+				"useESModules": false,
+				"version": "7.0.0-beta.0"
+			}
+		]
+	]
+}
