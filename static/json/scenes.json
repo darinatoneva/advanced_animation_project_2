@@ -50,7 +50,8 @@
 			"title": "scene_3_text",
 			"media_type": "text",
 			"media_url": "",
-			"text": "Electricity also reshaped the design of our cities and the rhythm of society. By removing the need for skylights, taller and taller buildings became a reality and cities could function through the night."
+			"text": "Electricity also reshaped the design of our cities and the rhythm of society. By removing the need for skylights, taller and taller buildings became a reality and cities could function through the night.",
+			"direction_text": "Click the buildings to light the city"
 		}
 	]
 }

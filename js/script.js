@@ -6,8 +6,14 @@ window.addEventListener("DOMContentLoaded", start);
 // setup gsap
 gsap.registerPlugin(MotionPathPlugin);
 
-// gsap test animation
-// gsap.from(".anim", { duration: 3, stagger: 1, y: 100 });
+// gsap test animation scene 3
+gsap.from(".anim", { duration: 2, stagger: 1, y: 100, opacity: 0 });
+
+// timeline for gsap scene 3
+let tl = gsap.timeline();
+tl.from("#sceneThreeText", { x: 100, delay: 2, opacity: 0, duration: 1 });
+tl.from("#sceneThreeDirectionText", { x: 100, delay: 2, opacity: 0, duration: 1 });
+gsap.to("#pictureFilter feGaussianBlur", 1, { attr: { stdDeviation: 0 }, repeat: -1, yoyo: true });
 
 // start function
 function start() {
@@ -53,34 +59,8 @@ function showSceneThree(data) {
 	// const world_url = data.scene_three[0].media_url;
 	// document.querySelector("#worldImg").src = world_url;
 	document.querySelector("#sceneThreeText").innerHTML = data.scene_three[2].text;
+	document.querySelector("#sceneThreeDirectionText").innerHTML = data.scene_three[2].direction_text;
 }
-
-// or ...
-// can we do this?
-//
-// ... take an image from the json object
-// and put it in the DOM so we can manipulate the parts of it there?
-// guess we need to put it in as 'response.text' instead of 'response.json'?
-// (like the coloring book)
-
-// // show data from API
-// function showSceneOne(data) {
-// 	// document.querySelector("#scene_three_bg").innerHTML = data;
-// 	document.querySelector("#sceneOneText").innerHTML = data.scene_one[2].text;
-// 	showSceneTwo(data);
-// }
-
-// function showSceneTwo(data) {
-// 	document.querySelector("#sceneTwoText").innerHTML = data.scene_two[2].text;
-// 	showSceneThree(data);
-// }
-
-// function showSceneThree(data) {
-// 	var world_url = data.scene_three[0].media_url;
-// 	document.querySelector("#worldImg").src += world_url;
-// 	//document.querySelector("#island").src = data.scene_three[0].media_url;
-// 	//document.querySelector("#sceneThreeText").innerHTML = data.scene_three[2].text;
-// }
 
 //MODAL
 

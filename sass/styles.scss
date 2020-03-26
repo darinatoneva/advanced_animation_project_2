@@ -316,11 +316,12 @@ h1 {
 }
 
 #sceneThree {
-	background-color: var(--bg-color-scene-3);
-	height: 100vh;
-	width: 100vw;
+	background-color: var(--bg-color-scene-1);
+	// height: 100vh;
+	// width: 100vw;
+	grid-column: 1 / -1;
 	display: grid;
-	grid-column: 1 / span 13;
+	grid-template-columns: repeat(12, 1fr);
 	scroll-behavior: smooth;
 
 	.homeIcon2 {
@@ -337,11 +338,25 @@ h1 {
 		color: var(--fourth-color);
 	}
 
-	#stars {
-		grid-row: 2 / span 4;
-		grid-column: 1 / span 13;
-		width: 100%;
+	#sceneThreeText {
+		grid-column: 4 / 10;
+		grid-row: 2;
+		margin-top: 2rem;
+		text-align: center;
 	}
+
+	#sceneThreeDirectionText {
+		grid-column: 4 / 10;
+		grid-row: 3;
+		margin-top: 2rem;
+		text-align: center;
+	}
+
+	// #stars {
+	// 	grid-row: 2 / span 4;
+	// 	grid-column: 1 / span 13;
+	// 	width: 100%;
+	// }
 
 	#worldImg {
 		height: 100vh;
@@ -379,7 +394,7 @@ h1 {
 		// stroke: red;
 		// stroke-width: 50px;
 		// stroke-opacity: 0.4;
-		visibility: hidden;
+		visibility: visible;
 	}
 
 	#watchLight {
@@ -392,29 +407,4 @@ h1 {
 		// stroke-opacity: 0.4;
 		visibility: hidden;
 	}
-
-	#darkBg {
-	}
-
-	#sceneThreeText {
-		grid-column: 9/12;
-	}
 }
-
-// // keyframe for glowing animation
-// @keyframes glowAnim {
-// 	0% {
-// 		opacity: 0;
-// 	}
-
-// 	100% {
-// 		opacity: 1;
-// 	}
-// }
-
-// // sass mixin for glow
-// @mixin glowing {
-// 	stroke: yellow;
-// 	stroke-width: 50px;
-// 	animation: glowAnim 1s ease infinite alternate;
-// }
