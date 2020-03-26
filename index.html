@@ -1,125 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sass/styles.scss" />
+    <link rel="stylesheet" href="sass/mobile.scss" />
+    <title>How The Lightbulb Changed The World</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="sass/styles.scss" />
-  <link rel="stylesheet" href="sass/mobile.scss">
-  <title>How The Lightbulb Changed The World</title>
-</head>
+  <body>
+    <div class="grid">
+      <!--Scene 1-->
+      <section id="sceneOne">
+        <img id="how-the" src="static/img/how_the.svg" alt="how the text" />
+        <img
+          id="lightBulb"
+          src="static/img/lightBulb.svg"
+          alt="light bulb text"
+        />
+        <img id="changed" src="static/img/changed.svg" alt="changed text" />
+        <img
+          id="the-world"
+          src="static/img/the_world.svg"
+          alt="the world text"
+        />
 
-<body>
-  <div class="grid">
-    <!--Scene 1-->
-    <section id="sceneOne">
-      <img id="how-the" src="static/img/how_the.svg" alt="how the text" />
-      <img id="lightBulb" src="static/img/lightBulb.svg" alt="light bulb text" />
-      <img id="changed" src="static/img/changed.svg" alt="changed text" />
-      <img id="the-world" src="static/img/the_world.svg" alt="the world text" />
+        <a href="#sceneTwo" class="arrow_down-screen1">
+          <img src="static/img/arrow_down.svg" alt="arrow down" />
+        </a>
+      </section>
 
-      <a href="#sceneTwo" class="arrow_down-screen1">
-        <img src="static/img/arrow_down.svg" alt="arrow down" />
-      </a>
-    </section>
+      <!--Scene 2-->
+      <section id="sceneTwo">
+        <a href="#sceneOne">
+          <img
+            class="homeIcon"
+            src="static/img/home_icon.svg"
+            alt="home icon"
+          />
+        </a>
+        <h1 class="scene_heading">Let there be light</h1>
+        <p>
+          Glück Auf! Prahlhans und Kerbholz bauchpinseln blümerant Rächer.
+          Scharmützel und Mundraub erquicken hanebüchen Schindluder. Das
+          blümerant Gaudi. Die Kittchen berappen das rosig Klimbim. Das
+          Kaffeekränzchen picheln der gebeutelt Scharmützel. Das Damenbart
+          grämen der adrett Kleinod. Der dufte Schäferstündchen. Der Wuchtbrumme
+          bauchpinseln die stramm Rostbratwurst. Die Sittenstrolch picheln die
+          grobschlächtig Hanswurst. Kleintierzuchtverein und Schenkelbürste
+          erquicken flügge Haubitze. Tölpel und Klabusterbeere frohlocken adrett
+          Jungfer. Die Bordsteinschwalbe bohnern das famos Hochstapler. Fatzke
+          und Haudegen schlampampen frivol Sättigungsbeilage. Die nichtsnutzig
+          Tohuwabohu. Mein lieber Scholli!
+        </p>
 
-    <!--Scene 2-->
-    <section id="sceneTwo">
-      <a href="#sceneOne">
-        <img class="homeIcon" src="static/img/home_icon.svg" alt="home icon" />
-      </a>
-      <h1 class="scene_heading">Let there be light</h1>
-      <p>
-        Glück Auf! Prahlhans und Kerbholz bauchpinseln blümerant Rächer.
-        Scharmützel und Mundraub erquicken hanebüchen Schindluder. Das
-        blümerant Gaudi. Die Kittchen berappen das rosig Klimbim. Das
-        Kaffeekränzchen picheln der gebeutelt Scharmützel. Das Damenbart
-        grämen der adrett Kleinod. Der dufte Schäferstündchen. Der Wuchtbrumme
-        bauchpinseln die stramm Rostbratwurst. Die Sittenstrolch picheln die
-        grobschlächtig Hanswurst. Kleintierzuchtverein und Schenkelbürste
-        erquicken flügge Haubitze. Tölpel und Klabusterbeere frohlocken adrett
-        Jungfer. Die Bordsteinschwalbe bohnern das famos Hochstapler. Fatzke
-        und Haudegen schlampampen frivol Sättigungsbeilage. Die nichtsnutzig
-        Tohuwabohu. Mein lieber Scholli!
-      </p>
+        <img id="birth" src="static/img/birth.svg" alt="lightbulb" />
+        <!--<img id="shape" src="static/img/birth-shape.svg" alt="shape" />-->
 
+        <!--Animation lights-->
+        <div id="space"></div>
 
-      <img id="birth" src="static/img/birth.svg" alt="lightbulb" />
-      <!--<img id="shape" src="static/img/birth-shape.svg" alt="shape" />-->
+        <a href="#sceneOne" class="arrow_up-screen2">
+          <img src="static/img/arrow_up.svg" alt="arrow up" />
+        </a>
+        <a href="#sceneThree" class="arrow_down-screen2">
+          <img src="static/img/arrow_down.svg" alt="arrow down" />
+        </a>
 
-      <!--Animation lights-->
-      <div id="space"></div>
+        <!--MODAL-->
 
-      <a href="#sceneOne" class="arrow_up-screen2">
-        <img src="static/img/arrow_up.svg" alt="arrow up" />
-      </a>
-      <a href="#sceneThree" class="arrow_down-screen2">
-        <img src="static/img/arrow_down.svg" alt="arrow down" />
-      </a>
+        <!-- Trigger/Open The Modal -->
+        <button id="button-More">More</button>
 
-      <!--MODAL-->
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>
+              Die Kittchen berappen das rosig Klimbim. Das Kaffeekränzchen
+              picheln der gebeutelt Scharmützel. Das Damenbart grämen der adrett
+              Kleinod. Der dufte Schäferstündchen. Der Wuchtbrumme bauchpinseln
+              die stramm Rostbratwurst. Die Sittenstrolch picheln die
+              grobschlächtig Hanswurst. Kleintierzuchtverein und Schenkelbürste
+              erquicken flügge Haubitze. Tölpel und Klabusterbeere frohlocken
+              adrett Jungfer. Die Bordsteinschwalbe bohnern das famos
+              Hochstapler. Fatzke und Haudegen schlampampen frivol
+              Sättigungsbeilage. Die nichtsnutzig Tohuwabohu. Mein lieber
+              Scholli!
+            </p>
+            <figure>
+              <img
+                id="ThomasEdison"
+                src="static/img/1200px-Thomas_Edison2.jpg"
+                alt="Thomas Edison"
+              />
+              <figcaption>Fig.1 - Thomas Edison</figcaption>
+            </figure>
+            <!--<img id="ThomasEdison" src="static/img/1200px-Thomas_Edison2.jpg" alt="Thomas Edison">-->
 
+            <p>
+              Die Kittchen berappen das rosig Klimbim. Das Kaffeekränzchen
+              picheln der gebeutelt Scharmützel. Das Damenbart grämen der adrett
+              Kleinod. Der dufte Schäferstündchen. Der Wuchtbrumme bauchpinseln
+              die stramm Rostbratwurst. Die Sittenstrolch picheln die
+              grobschlächtig Hanswurst. Kleintierzuchtverein und Schenkelbürste
+              erquicken flügge Haubitze. Tölpel und Klabusterbeere frohlocken
+              adrett Jungfer. Die Bordsteinschwalbe bohnern das famos
+              Hochstapler. Fatzke und Haudegen schlampampen frivol
+              Sättigungsbeilage. Die nichtsnutzig Tohuwabohu. Mein lieber
+              Scholli!
+            </p>
 
-      <!-- Trigger/Open The Modal -->
-      <button id="button-More">More</button>
-
-      <!-- The Modal -->
-      <div id="myModal" class="modal">
-
-        <!-- Modal content -->
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <p>Die Kittchen berappen das rosig Klimbim. Das
-            Kaffeekränzchen picheln der gebeutelt Scharmützel. Das Damenbart
-            grämen der adrett Kleinod. Der dufte Schäferstündchen. Der Wuchtbrumme
-            bauchpinseln die stramm Rostbratwurst. Die Sittenstrolch picheln die
-            grobschlächtig Hanswurst. Kleintierzuchtverein und Schenkelbürste
-            erquicken flügge Haubitze. Tölpel und Klabusterbeere frohlocken adrett
-            Jungfer. Die Bordsteinschwalbe bohnern das famos Hochstapler. Fatzke
-            und Haudegen schlampampen frivol Sättigungsbeilage. Die nichtsnutzig
-            Tohuwabohu. Mein lieber Scholli!</p>
-          <img id="ThomasEdison" src="static/img/1200px-Thomas_Edison2.jpg" alt="Thomas Edison">
-
-          <p>Die Kittchen berappen das rosig Klimbim. Das
-            Kaffeekränzchen picheln der gebeutelt Scharmützel. Das Damenbart
-            grämen der adrett Kleinod. Der dufte Schäferstündchen. Der Wuchtbrumme
-            bauchpinseln die stramm Rostbratwurst. Die Sittenstrolch picheln die
-            grobschlächtig Hanswurst. Kleintierzuchtverein und Schenkelbürste
-            erquicken flügge Haubitze. Tölpel und Klabusterbeere frohlocken adrett
-            Jungfer. Die Bordsteinschwalbe bohnern das famos Hochstapler. Fatzke
-            und Haudegen schlampampen frivol Sättigungsbeilage. Die nichtsnutzig
-            Tohuwabohu. Mein lieber Scholli!</p>
-
-          <img id="ThomasEdison" src="static/img/lightbulb.jpeg" alt="Thomas Edison">
-
-
-
-
+            <img
+              id="ThomasEdison"
+              src="static/img/lightbulb.jpeg"
+              alt="Thomas Edison"
+            />
+          </div>
         </div>
+      </section>
 
-      </div>
-    </section>
-
-    <!--Scene 3-->
-    <section id="sceneThree">
-      <a href="#sceneOne" class="homeIcon2">
-        <img src="static/img/home_icon.svg" alt="home icon" />
-      </a>
-      <h1 class="scene_heading">Some title here</h1>
-      <!--
+      <!--Scene 3-->
+      <section id="sceneThree">
+        <a href="#sceneOne" class="homeIcon2">
+          <img src="static/img/home_icon.svg" alt="home icon" />
+        </a>
+        <h1 class="scene_heading">Some title here</h1>
+        <!--
       <img id="worldImg" src="static/img/world2.svg" alt="world pic">
       <img id="stars" src="static/img/stars2.svg" alt="stars pic">
     -->
-      <img id="worldImg" src="" alt="world pic" />
+        <img id="worldImg" src="" alt="world pic" />
 
-      <a href="#sceneTwo" class="arrow_up-screen3">
-        <img src="static/img/arrow_up.svg" alt="arrow up" />
-      </a>
-    </section>
-  </div>
-</body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/MotionPathPlugin.min.js"></script>
-<script src="js/script.js"></script>
-
+        <a href="#sceneTwo" class="arrow_up-screen3">
+          <img src="static/img/arrow_up.svg" alt="arrow up" />
+        </a>
+      </section>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/MotionPathPlugin.min.js"></script>
+  <script src="js/script.js"></script>
 </html>
