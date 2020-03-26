@@ -12,7 +12,7 @@ gsap.from(".anim", { duration: 2, stagger: 1, y: 100, opacity: 0 });
 // timeline for gsap scene 3
 let tl = gsap.timeline();
 tl.from("#sceneThreeText", { x: 100, delay: 2, opacity: 0, duration: 1 });
-tl.from("#sceneThreeDirectionText", { x: 100, delay: 2, opacity: 0, duration: 1 });
+tl.from("#sceneThreeDirectionText", { x: 100, delay: 1, opacity: 0, duration: 1 });
 gsap.to("#pictureFilter feGaussianBlur", 1, { attr: { stdDeviation: 0 }, repeat: -1, yoyo: true });
 
 // start function
