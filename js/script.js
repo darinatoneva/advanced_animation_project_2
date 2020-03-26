@@ -80,7 +80,7 @@ window.onclick = function (event) {
 }
 //animation modal
 gsap.from("#myModal", {
-  duration: 5,
+  duration: 6,
   scale: 0.2,
   ease: "linear"
 });
