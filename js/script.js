@@ -4,7 +4,7 @@
 window.addEventListener("DOMContentLoaded", start);
 
 // setup gsap
-import { gsap } from "gsap/dist/gsap";
+// import { gsap } from "gsap/dist/gsap";
 
 gsap.registerPlugin(MotionPathPlugin);
 
