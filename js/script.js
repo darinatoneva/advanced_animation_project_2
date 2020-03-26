@@ -57,7 +57,7 @@ function showSceneThree(data) {
 var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+var btn = document.getElementById("button-More");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -76,13 +76,12 @@ span.onclick = function () {
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
-
   }
 }
 //animation modal
 gsap.from("#myModal", {
   duration: 5,
-  scale: 0,
+  scale: 0.2,
   ease: "linear"
 });
 
@@ -90,9 +89,10 @@ gsap.from("#myModal", {
 //ANIMATIONS screen 2
 /*Animation lights*/
 gsap.from("#birth", {
+  delay: 1,
   duration: 10,
-  scale: 0.5,
-  ease: "back"
+  scale: 0,
+
 });
 
 let space = document.getElementById("space"),
