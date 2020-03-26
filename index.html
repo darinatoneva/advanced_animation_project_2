@@ -81,12 +81,22 @@
 					<img src="static/img/home_icon.svg" alt="home icon" />
 				</a>
 				<h1 class="scene_heading">Graeme Test</h1>
-				<!--
-      <img id="worldImg" src="static/img/world2.svg" alt="world pic">
-      <img id="stars" src="static/img/stars2.svg" alt="stars pic">
-    -->
-				<img id="worldImg" src="" alt="world pic" />
-
+				<h2 id="sceneThreeText"></h2>
+				<svg>
+					<defs>
+						<filter id="pictureFilter" x="-150%" y="-150%" height="500%" width="500%">
+							<feGaussianBlur stdDeviation="25" result="coloredBlur" />
+							<feMerge>
+								<feMergeNode in="coloredBlur" />
+								<feMergeNode in="SourceGraphic" />
+							</feMerge>
+							<feOffset in="blur" dx="3" dy="3" result="offsetBlur" />
+							<feFlood flood-color="yellow" flood-opacity="1" result="offsetColor" />
+							<feComposite in="offsetColor" in2="offsetBlur" operator="in" result="offsetBlur" />
+						</filter>
+					</defs>
+				</svg>
+				<div id="worldImg" class="anim"></div>
 				<a href="#sceneTwo" class="arrow_up-screen3">
 					<img src="static/img/arrow_up.svg" alt="arrow up" />
 				</a>
