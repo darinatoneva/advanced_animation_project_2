@@ -4,10 +4,47 @@
 window.addEventListener("DOMContentLoaded", start);
 
 // setup gsap
+import { gsap } from "gsap/dist/gsap";
+
 gsap.registerPlugin(MotionPathPlugin);
 
-// gsap test animation
-// gsap.from(".anim", { duration: 3, stagger: 1, y: 100 });
+//First screen animation
+//gsap.to("#how-the", { duration: 1, x: 100 });
+gsap.from("#how-the", {
+  opacity: 0,
+  duration: 0.5,
+  y: -50,
+  ease: Power2.easeOut
+});
+gsap.from("#lightBulb", {
+  opacity: 0,
+  duration: 1.5,
+  x: 500,
+  ease: Elastic.easeOut.config(1.5, 0.5),
+  delay: 0.5
+});
+gsap.from("#changed", {
+  opacity: 0,
+  duration: 0.5,
+  y: -50,
+  ease: Power2.easeOut,
+  delay: 0.6
+});
+
+gsap.from("#the-world", {
+  opacity: 0,
+  duration: 1,
+  y: 100,
+  ease: Elastic.easeOut.config(1.5, 0.5),
+  delay: 1
+});
+
+gsap.from("#light", 3, {
+  filter: "blur(10px)",
+  autoRound: false,
+  yoyo: true,
+  repeat: -1
+});
 
 // start function
 function start() {
@@ -62,22 +99,22 @@ var btn = document.getElementById("button-More");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
-btn.onclick = function () {
+// When the user clicks the button, open the modal
+btn.onclick = function() {
   modal.style.display = "block";
-}
+};
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function () {
+span.onclick = function() {
   modal.style.display = "none";
-}
+};
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
+window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
+};
 //animation modal
 gsap.from("#myModal", {
   duration: 5,
@@ -85,14 +122,12 @@ gsap.from("#myModal", {
   ease: "linear"
 });
 
-
 //ANIMATIONS screen 2
 /*Animation lights*/
 gsap.from("#birth", {
   delay: 1,
   duration: 10,
-  scale: 0,
-
+  scale: 0
 });
 
 let space = document.getElementById("space"),
@@ -103,13 +138,14 @@ let space = document.getElementById("space"),
 space.style.setProperty(`--perspective`, `${perspective}px`);
 
 function makeStar() {
-  const star = document.createElement('time'),
+  const star = document.createElement("time"),
     starWidth = gsap.utils.random(1, 2, 1),
     starHeight = starWidth * gsap.utils.random(20, 40, 1),
     randomRotation = Math.random() * 360,
     scaleModifier = Math.random();
 
-  const visibleRangeMaximum = spaceWidth - spaceHeight > 0 ? spaceWidth / 2 : spaceHeight / 2;
+  const visibleRangeMaximum =
+    spaceWidth - spaceHeight > 0 ? spaceWidth / 2 : spaceHeight / 2;
 
   gsap.set(star, {
     width: starWidth,
@@ -120,21 +156,23 @@ function makeStar() {
       rotateX(90deg)
       translate3d(0,0,0px)
       scaleX(${scaleModifier})
-    `,
+    `
   });
 
-  gsap.to(star, {
-    duration: "random(5, 20)",
-    transform: `
+  gsap
+    .to(star, {
+      duration: "random(5, 20)",
+      transform: `
       translateY(${starHeight / 2}px)
       rotate(${randomRotation}deg)
       rotateX(90deg)
       translate3d(0,0,${perspective + visibleRangeMaximum}px)
       scaleX(${scaleModifier})
     `,
-    repeat: -1,
-    ease: "none",
-  }).progress(Math.random());
+      repeat: -1,
+      ease: "none"
+    })
+    .progress(Math.random());
 
   space.appendChild(star);
 }
