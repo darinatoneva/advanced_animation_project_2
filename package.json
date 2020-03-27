@@ -5,6 +5,7 @@
 	"main": "js/script.js",
 	"scripts": {
 		"start": "parcel *.html --open",
+		"build2": "rm -rf .cache && rm -rf dist && npm run build",
 		"build": "parcel build *.html --public-url ./",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
