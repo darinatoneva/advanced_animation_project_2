@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lora&display=swap");
 
 :root {
   font-size: 1.4rem;
@@ -244,7 +244,6 @@ h1 {
       font-size: 1.5rem;
       grid-column: 1 / span 6;
     }
-
     #space {
       clip-path: circle(250px at center);
     }
@@ -307,7 +306,7 @@ h1 {
     /* Enable scroll if needed */
     background-color: rgb(0, 0, 0);
     /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.4);
     /* Black w/ opacity */
   }
 
@@ -340,6 +339,7 @@ h1 {
     grid-row: 1;
     margin: 50px 10px 10px 30px;
   }
+
   #ThomasEdison {
     width: 100%;
     height: auto;
@@ -372,11 +372,11 @@ h1 {
 
 #sceneThree {
   background-color: var(--bg-color-scene-3);
-  height: 100vh;
-  width: 100vw;
+  // height: 100vh;
+  // width: 100vw;
+  grid-column: 1 / -1;
   display: grid;
-  grid-column: 1 / span 13;
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   scroll-behavior: smooth;
 
   .homeIcon2 {
@@ -393,13 +393,32 @@ h1 {
     color: var(--fourth-color);
   }
 
-  #stars {
-    grid-row: 2 / span 4;
-    grid-column: 1 / span 13;
-    width: 100%;
+  #sceneThreeText {
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    font-weight: light;
+    color: white;
+    grid-column: 4 / 10;
+    grid-row: 2;
+    margin-top: 2rem;
+    text-align: center;
   }
 
+  #sceneThreeDirectionText {
+    grid-column: 4 / 10;
+    grid-row: 3;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  // #stars {
+  // 	grid-row: 2 / span 4;
+  // 	grid-column: 1 / span 13;
+  // 	width: 100%;
+  // }
+
   #worldImg {
+    height: 100vh;
     width: 100%;
     grid-column: 1 / span 13;
     grid-row: 3/4;
@@ -415,5 +434,36 @@ h1 {
     grid-row: 1;
     grid-column: 1 / span 13;
     margin-top: 50px;
+  }
+
+  // active class for element clicked
+  .active {
+    // @include glowing;
+    filter: url(#pictureFilter);
+    // filter: grayscale(1);
+  }
+
+  #earth,
+  #city {
+    transform: scale(1);
+    transform-origin: center;
+  }
+
+  circle {
+    // stroke: red;
+    // stroke-width: 50px;
+    // stroke-opacity: 0.4;
+    visibility: visible;
+  }
+
+  #watchLight {
+    visibility: visible;
+  }
+
+  rect {
+    // stroke: yellow;
+    // stroke-width: 30px;
+    // stroke-opacity: 0.4;
+    visibility: hidden;
   }
 }
