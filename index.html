@@ -1,112 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="sass/styles.scss" />
-		<link rel="stylesheet" href="sass/mobile.scss" />
-		<title>How The Lightbulb Changed The World</title>
-	</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sass/styles.scss" />
+    <link rel="stylesheet" href="sass/mobile.scss" />
+    <title>How The Lightbulb Changed The World</title>
+  </head>
 
-	<body>
-		<div class="grid">
-			<!--Scene 1-->
-			<section id="sceneOne">
-				<img id="how-the" src="static/img/how_the.svg" alt="how the text" />
-				<img id="lightBulb" src="static/img/lightBulb.svg" alt="light bulb text" />
+  <body>
+    <div class="grid">
+      <!--Scene 1-->
+      <section id="sceneOne">
+        <img id="how-the" src="static/img/how_the.svg" alt="how the text" />
+        <img
+          id="lightBulb"
+          src="static/img/lightBulb.svg"
+          alt="light bulb text"
+        />
 
-				<img id="changed" src="static/img/changed.svg" alt="changed text" />
-				<img id="the-world" src="static/img/the_world.svg" alt="the world text" />
+        <img id="changed" src="static/img/changed.svg" alt="changed text" />
+        <img
+          id="the-world"
+          src="static/img/the_world.svg"
+          alt="the world text"
+        />
 
-				<a href="#sceneTwo" class="arrow_down-screen1">
-					<img src="static/img/arrow_down.svg" alt="arrow down" />
-				</a>
-			</section>
+        <a href="#sceneTwo" class="arrow_down-screen1">
+          <img src="static/img/arrow_down.svg" alt="arrow down" />
+        </a>
+      </section>
+      <!--Scene 2-->
+      <section id="sceneTwo">
+        <a href="#sceneOne">
+          <img
+            class="homeIcon"
+            src="static/img/home_icon.svg"
+            alt="home icon"
+          />
+        </a>
+        <h1 class="scene_heading">Birth of the light bulb</h1>
+        <p>
+          Thomas Edison patented the first commercially successful light bulb in
+          1879, but the story begins long before. The history of electricity
+          Electricity is a form of energy and it occurs in nature, so it was not
+          “invented.” Ancient Greeks discovered static electricity in about 600
+          BC. At ancient Roman sites pots with sheets of copper inside were
+          found. Similar “battery” devices were found near Baghdad that time.
+        </p>
 
-			<!--Scene 2-->
-			<section id="sceneTwo">
-				<a href="#sceneOne">
-					<img class="homeIcon" src="static/img/home_icon.svg" alt="home icon" />
-				</a>
-				<h1 class="scene_heading">Let there be light</h1>
-				<p>
-					Glück Auf! Prahlhans und Kerbholz bauchpinseln blümerant Rächer. Scharmützel und Mundraub erquicken hanebüchen Schindluder. Das blümerant Gaudi. Die Kittchen berappen das rosig Klimbim. Das Kaffeekränzchen picheln der gebeutelt Scharmützel.
-					Das Damenbart grämen der adrett Kleinod. Der dufte Schäferstündchen. Der Wuchtbrumme bauchpinseln die stramm Rostbratwurst. Die Sittenstrolch picheln die grobschlächtig Hanswurst. Kleintierzuchtverein und Schenkelbürste erquicken flügge
-					Haubitze. Tölpel und Klabusterbeere frohlocken adrett Jungfer. Die Bordsteinschwalbe bohnern das famos Hochstapler. Fatzke und Haudegen schlampampen frivol Sättigungsbeilage. Die nichtsnutzig Tohuwabohu. Mein lieber Scholli!
-				</p>
+        <img id="birth" src="static/img/birth.svg" alt="lightbulb" />
+        <!--<img id="shape" src="static/img/birth-shape.svg" alt="shape" />-->
 
-				<img id="birth" src="static/img/birth.svg" alt="lightbulb" />
-				<!--<img id="shape" src="static/img/birth-shape.svg" alt="shape" />-->
+        <!--Animation lights-->
+        <div id="space"></div>
 
-				<!--Animation lights-->
-				<div id="space"></div>
+        <a href="#sceneOne" class="arrow_up-screen2">
+          <img src="static/img/arrow_up.svg" alt="arrow up" />
+        </a>
+        <a href="#sceneThree" class="arrow_down-screen2">
+          <img src="static/img/arrow_down.svg" alt="arrow down" />
+        </a>
 
-				<a href="#sceneOne" class="arrow_up-screen2">
-					<img src="static/img/arrow_up.svg" alt="arrow up" />
-				</a>
-				<a href="#sceneThree" class="arrow_down-screen2">
-					<img src="static/img/arrow_down.svg" alt="arrow down" />
-				</a>
+        <!--MODAL-->
 
-				<!--MODAL-->
+        <!-- Trigger/Open The Modal -->
+        <button id="button-More">More</button>
 
-				<!-- Trigger/Open The Modal -->
-				<button id="button-More">More</button>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <figure id="ThomasEdisonFigure">
+              <img
+                id="ThomasEdison"
+                src="static/img/1200px-Thomas_Edison2.jpg"
+                alt="Thomas Edison"
+              />
+              <figcaption>Fig.1 - Thomas Edison</figcaption>
+            </figure>
+            <p id="ThomasEdisonParagraph">
+              In 1600, the English physician William Gilbert used the Latin word
+              “electricus” and a few years later Thomas Browne, another English
+              scientist, used the word “electricity” to describe the force that
+              certain substances exert when rubbed against each other. <br />In
+              1752, Ben Franklin proved that lightning and tiny electric sparks
+              were the same. The Italian Inventor Alessandro Volta developed the
+              voltaic pile, the first practical method of generating
+              electricity, in 1800. <br />A light bulb was born With the
+              invention of the voltaic pile the first electric lamp was invented
+              by connecting voltaic piles to charcoal electrodes. Davy´s
+              invention was called the electric arc lamp. Even though, it was an
+              improvement and the principles behind Davy´s invention was the
+              foundation for many other electric lamps and bulbs, it was not
+              ready yet for use at home. Swan vs. Edison
+            </p>
 
-				<!-- The Modal -->
-				<div id="myModal" class="modal">
-					<!-- Modal content -->
-					<div class="modal-content">
-						<span class="close">&times;</span>
-						<p>
-							Die Kittchen berappen das rosig Klimbim. Das Kaffeekränzchen picheln der gebeutelt Scharmützel. Das Damenbart grämen der adrett Kleinod. Der dufte Schäferstündchen. Der Wuchtbrumme bauchpinseln die stramm Rostbratwurst. Die
-							Sittenstrolch picheln die grobschlächtig Hanswurst. Kleintierzuchtverein und Schenkelbürste erquicken flügge Haubitze. Tölpel und Klabusterbeere frohlocken adrett Jungfer. Die Bordsteinschwalbe bohnern das famos Hochstapler. Fatzke und
-							Haudegen schlampampen frivol Sättigungsbeilage. Die nichtsnutzig Tohuwabohu. Mein lieber Scholli!
-						</p>
-						<img id="ThomasEdison" src="static/img/1200px-Thomas_Edison2.jpg" alt="Thomas Edison" />
+            <!--<img id="ThomasEdison" src="static/img/1200px-Thomas_Edison2.jpg" alt="Thomas Edison">-->
+            <figure id="lightBulbImgFigure">
+              <img
+                id="lightBulbImg-modal"
+                src="static/img/lightbulb.jpeg"
+                alt="Thomas Edison's light bulb"
+              />
+              <figcaption>Fig.2 - Thomas Edison's light bulb</figcaption>
+            </figure>
+            <p id="LightBulbParagraph">
+              In 1850 Joseph Swan invented a light bulb by enclosing carbonized
+              paper filaments in an evacuated glass bulb. By the lack of a good
+              vacuum pumps back then and experimenting with materials he finally
+              developed a long-lasting light bulb in 1878. Thomas Edison
+              continued to test several types of materials and discovered that
+              carbonized bamboo filament could last over 1200 hours. This was
+              the beginning of the commercially manufactured light bulbs.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!--Scene 3-->
+      <section id="sceneThree">
+        <a href="#sceneOne" class="homeIcon2">
+          <img src="static/img/home_icon.svg" alt="home icon" />
+        </a>
+        <h1 class="scene_heading">City Lights</h1>
+        <h2 id="sceneThreeText"></h2>
+        <h1 id="sceneThreeDirectionText"></h1>
+        <svg>
+          <defs>
+            <filter
+              id="pictureFilter"
+              x="-150%"
+              y="-150%"
+              height="500%"
+              width="500%"
+            >
+              <feGaussianBlur stdDeviation="25" result="coloredBlur" />
+              <feMerge>
+                <feMergeNode in="coloredBlur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+              <feOffset in="blur" dx="3" dy="3" result="offsetBlur" />
+              <feFlood
+                flood-color="yellow"
+                flood-opacity="1"
+                result="offsetColor"
+              />
+              <feComposite
+                in="offsetColor"
+                in2="offsetBlur"
+                operator="in"
+                result="offsetBlur"
+              />
+            </filter>
+          </defs>
+        </svg>
+        <div id="worldImg" class="anim"></div>
 
-						<p>
-							Die Kittchen berappen das rosig Klimbim. Das Kaffeekränzchen picheln der gebeutelt Scharmützel. Das Damenbart grämen der adrett Kleinod. Der dufte Schäferstündchen. Der Wuchtbrumme bauchpinseln die stramm Rostbratwurst. Die
-							Sittenstrolch picheln die grobschlächtig Hanswurst. Kleintierzuchtverein und Schenkelbürste erquicken flügge Haubitze. Tölpel und Klabusterbeere frohlocken adrett Jungfer. Die Bordsteinschwalbe bohnern das famos Hochstapler. Fatzke und
-							Haudegen schlampampen frivol Sättigungsbeilage. Die nichtsnutzig Tohuwabohu. Mein lieber Scholli!
-						</p>
-
-						<img id="ThomasEdison" src="static/img/lightbulb.jpeg" alt="Thomas Edison" />
-					</div>
-				</div>
-			</section>
-
-			<!--Scene 3-->
-			<section id="sceneThree">
-				<a href="#sceneOne" class="homeIcon2">
-					<img src="static/img/home_icon.svg" alt="home icon" />
-				</a>
-				<h1 class="scene_heading">City Lights</h1>
-				<h2 id="sceneThreeText"></h2>
-				<h1 id="sceneThreeDirectionText"></h1>
-				<svg>
-					<defs>
-						<filter id="pictureFilter" x="-150%" y="-150%" height="500%" width="500%">
-							<feGaussianBlur stdDeviation="25" result="coloredBlur" />
-							<feMerge>
-								<feMergeNode in="coloredBlur" />
-								<feMergeNode in="SourceGraphic" />
-							</feMerge>
-							<feOffset in="blur" dx="3" dy="3" result="offsetBlur" />
-							<feFlood flood-color="yellow" flood-opacity="1" result="offsetColor" />
-							<feComposite in="offsetColor" in2="offsetBlur" operator="in" result="offsetBlur" />
-						</filter>
-					</defs>
-				</svg>
-				<div id="worldImg" class="anim"></div>
-
-				<a href="#sceneTwo" class="arrow_up-screen3">
-					<img src="static/img/arrow_up.svg" alt="arrow up" />
-				</a>
-			</section>
-		</div>
-	</body>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/MotionPathPlugin.min.js"></script>
-	<script src="js/script.js"></script>
+        <a href="#sceneTwo" class="arrow_up-screen3">
+          <img src="static/img/arrow_up.svg" alt="arrow up" />
+        </a>
+      </section>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/MotionPathPlugin.min.js"></script>
+  <script src="js/script.js"></script>
 </html>
